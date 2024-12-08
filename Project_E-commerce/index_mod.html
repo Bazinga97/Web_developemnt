@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Searchberg</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f6f8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .heading {
+            text-align: center;
+            color: #fff;
+            background-color: #3498db;
+            padding: 40px 15px;
+            margin-bottom: 30px;
+        }
+
+        .heading h3 {
+            margin: 0;
+            font-size: 2.8em;
+            line-height: 1.2;
+        }
+
+        h4 {
+            font-size: 1.8em;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.3em;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .why {
+            font-size: 2em;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .box1,
+        .box-1 {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+
+        }
+
+        .call-to-action {
+
+            background-color: #4f9fad;
+            color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 30px;
+        }
+
+        .call-to-action h3 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .call-to-action p {
+            font-size: 1.3em;
+            margin-bottom: 25px;
+        }
+
+        .call-to-action h4 {
+            font-size: 1.6em;
+            color: #fff;
+            margin-bottom: 25px;
+        }
+
+        .call-to-action b {
+            font-weight: bold;
+        }
+
+        .call-to-action .booknow {
+            background-color: #db2b43;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.4em;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .call-to-action .booknow:hover {
+            background-color: #21618c;
+
+        }
+
+
+        .box-container,
+        .box-container-1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .strategy-box,
+        .strategy-box-1 {
+            flex: 1 0 300px;
+            background-color: #fff;
+            border-radius: 50px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .strategy-box img,
+        .strategy-box-1 img {
+            max-width: 60px;
+            margin: 15px auto;
+            display: block;
+        }
+
+        .strategy-title,
+        .strategy-title-1 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .strategy-description,
+        .strategy-description-1 {
+            font-size: 1.1em;
+        }
+
+
+        .strategy-box:nth-child(1),
+        .strategy-box-1:nth-child(1) {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .strategy-box:nth-child(2),
+        .strategy-box-1:nth-child(2) {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+
+        .strategy-box:nth-child(3),
+        .strategy-box-1:nth-child(3) {
+            background-color: #f1c40f;
+            color: #333;
+        }
+
+        .box-trust {
+            background-color: #f5f5f5;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .booknow {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.4em;
+            display: inline-block;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .booknow:hover {
+            background-color: #2980b9;
+        }
+
+        .intro-box {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .intro-box img {
+            flex: 1 0 40%;
+            max-width: 400px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .content-box {
+            flex: 1 0 60%;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-left: -35px;
+        }
+
+
+        .footer {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 40px 15px;
+            margin-top: 40px;
+        }
+
+        .footer h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            font-size: 1.3em;
+            margin-bottom: 0;
+        }
+
+
+        @media screen and (max-width: 768px) {
+
+            .box-container,
+            .box-container-1,
+            .intro-box {
+                flex-direction: column;
+            }
+
+            .strategy-box,
+            .strategy-box-1 {
+                flex-basis: 100%;
+                margin-bottom: 30px;
+            }
+
+            .intro-box img,
+            .content-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h3>Transform Your Vision into a Thriving Business with The Searchberg</h3>
+        </div>
+
+        <h4>Ready to take your <u style="color:#3498db;">business</u> to the <u style="color:#3498db;">next level?</u>
+        </h4>
+
+        <p>Whether you're a <b>manufacturer thriving offline</b> and eager to build an online empire, or a <b>visionary
+                entrepreneur</b> looking to start your dream business online. <b>The Searchberg</b> is your one-stop
+            solution for unmatched <b>digital marketing expertise.</b></p>
+            <h4>Ready to take your <u style="color:#3498db;">business</u> to the <u style="color:#3498db;">next level?</u>
+            </h4>
+            
+            <p>Whether you're a <b>manufacturer thriving offline</b> and eager to build an online empire, or a <b>visionary
+                    entrepreneur</b> looking to start your dream business online. <b>The Searchberg</b> is your one-stop
+                solution for unmatched <b>digital marketing expertise.</b></p>
+            
+            <iframe width="100%" height="500" 
+                src="https://www.youtube.com/embed/8riMFCXAu1A" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            
+
+
+        <div class="box1">
+            <h2>Why Choose The Searchberg?</h2>
+        </div>
+
+        <div class="box-container">
+            <div class="strategy-box">
+                <img src="Proven-Strategies.jpeg" alt="Proven Strategies">
+                <h3>Proven Strategies:</h3>
+                <p>Our tailored digital marketing strategies ensure your business achieves exceptional results—be it
+                    online
+                    growth or brand establishment.</p>
+            </div>
+
+            <div class="strategy-box">
+                <img src="Industry-specific.jpeg" alt="Industry-Specific Expertise">
+                <h3>Industry-Specific Expertise:</h3>
+                <p>Specializing in fashion, e-commerce, and emerging markets, we understand the nuances of your
+                    industry.</p>
+            </div>
+
+            <div class="strategy-box">
+                <img src="End-to-End.jpeg" alt="End-to-End Solutions">
+                <h3>End-to-End Solutions:</h3>
+                <p>From website creation to social media dominance, we've got it all covered.</p>
+            </div>
+        </div>
+
+        <div class="box-trust">
+            <h3>Trusted by Industry Leaders</h3>
+            <p>"The Searchberg transformed my offline manufacturing business into an online sensation. Within 3 months,
+                I
+                saw a 200% growth in revenue!" <u><b>– Rohit Jain, Entrepreneur</b></u></p>
+        </div>
+
+        <div class="box-1">
+            <h2>What We Do for You</h2>
+        </div>
+
+        <div class="box-container-1">
+            <div class="strategy-box-1">
+                <h3>Turn Offline Success into Online Sales:</h3>
+                <p>We help established manufacturers take their successful offline presence into the world of
+                    e-commerce.</p>
+            </div>
+
+            <div class="strategy-box-1">
+                <h3>Launch Your Online Dream:</h3>
+                <p>Just starting out? We'll set up your digital storefront, craft impactful campaigns, and position your
+                    brand as a leader in your niche.</p>
+            </div>
+
+            <div class="strategy-box-1">
+                <h3>Drive Revenue & Leads:</h3>
+                <p>With our CAPS strategy, we optimize your customer acquisition process, ensuring every penny spent
+                    brings
+                    exponential returns.</p>
+            </div>
+        </div>
+
+
+        <div class="call-to-action">
+            <h3>Don’t Just Take a Step Forward, Leap Ahead!</h3>
+            <p>Your competitors are already online. It’s time to make your mark and <b>dominate the digital
+                    space.</b></p>
+            <h4><b style="color: #fff;">Limited Slots Available!</b> Click below to schedule your <b
+                    style="color: #fff;">FREE</b> business growth consultation and get an actionable roadmap to start
+                your journey today!</h4>
+            <a href="https://j00nllrystc.typeform.com/to/Hj0NOvVm?utm_source=xxxxx" class="booknow">Book Now</a>
+        </div>
+        <h1>Meet Tanmay Desai; <b style="color: #0b20d6;">E-commerce Growth Consultant & Founder of The Searchberg</b>
+        </h1>
+
+        <div class="intro-box">
+            <img src="Profilepicture.jpg" alt="Tanmay Desai">
+            <div class="content-box">
+                <h3>Tanmay Desai: Driving E-commerce Success</h3> 
+                <ul>
+                    <li><strong>Experienced Entrepreneur & Agency Founder:</strong> Leading The Searchberg to deliver
+                        exceptional
+                        results.</li>
+                    <li><strong>E-commerce & Fashion Specialist:</strong> Deep understanding of the unique challenges
+                        and
+                        opportunities within these dynamic industries.</li>
+                    <li><strong>Data-Driven Strategies:</strong> Leveraging cutting-edge technology and market analysis
+                        for
+                        measurable growth.</li>
+                    <li><strong>Full-Service Digital Marketing:</strong> From brand building to performance marketing,
+                        we handle
+                        every aspect of your online presence.</li>
+                    <li><strong>Proven Track Record:</strong> Delivering personalized strategies that achieve impactful,
+                        quantifiable results for our clients.</li>
+                    <li><strong>Services Include:</strong> Brand building, social media marketing, website design &
+                        development,
+                        engaging content creation, user-generated content (UGC) strategies, e-commerce platform setup &
+                        optimization, performance marketing campaigns.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h2>Still thinking? Just take an action</h2>
+            <p>Let's take your business to the next level by achieving 3x growth!</p>
+        </div>
+    </div>
+</body>
+
+</html>
